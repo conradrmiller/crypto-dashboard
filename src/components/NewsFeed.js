@@ -7,21 +7,21 @@ const NewsFeed = () => {
     useEffect(() => {
         const options = {
             method: "GET",
-            url: "http://localhost:8000/news",
+            url: "https://www.reddit.com/r/CryptoCurrency/hot.json?limit=10",
         };
 
         axios
             .request(options)
             .then((response) => {
-                console.log(response.data);
-                setArticles(response.data);
+                // console.log(response.data.data.children);
+                setArticles(response.data.data.children);
             })
             .catch((error) => {
                 console.error(error);
             });
     }, []);
 
-    console.log(articles);
+    // console.log('articles:', articles);
 
     const first7Articles = articles?.slice(0,7);
 
@@ -30,7 +30,7 @@ const NewsFeed = () => {
             <h2>News Feed</h2>
             {first7Articles?.map((article, _index) => (
                 <div key={_index}>
-                    <a href={article.url}><p>{article.title}</p></a>
+                    <a href={article.data.url}><p>{article.data.title}</p></a>
                 </div>
             ))}
         </div>

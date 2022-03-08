@@ -21,20 +21,17 @@ const CurrencyConverter = () => {
     const convert = () => {
         const options = {
           method: 'GET',
-          url: 'http://localhost:8000/convert',
-          params: {from_currency: chosenPrimaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', to_currency: chosenSecondaryCurrency},
+          url: `https://api.coinbase.com/v2/exchange-rates?currency=${chosenPrimaryCurrency}`,
         };
         
         axios.request(options).then( (response) => {
-            console.log(response.data);
-            // setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
-            setResult(response.data * amount)
-            // setPrimaryCurrencyExchanged(chosenPrimaryCurrency);
-            // setSecondaryCurrencyExchanged(chosenSecondaryCurrency);
+
+            setResult(response.data.data.rates[chosenSecondaryCurrency] * amount)
+
             setExchangedData({
                 primaryCurrency: chosenPrimaryCurrency,
                 secondaryCurrency: chosenSecondaryCurrency,
-                exchangeRate: response.data
+                exchangeRate: response.data.data.rates[chosenSecondaryCurrency]
             })
             
         }).catch((error) => {
