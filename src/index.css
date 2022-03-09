@@ -4,7 +4,8 @@
   --clr-light: #fff;
   --clr-med: #D1D1D1;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  /* --clr-accent: #16e0bd; */
+  --clr-accent: hsl(317 100% 54%)
 }
 
 body {
@@ -32,6 +33,14 @@ code {
   
 }
 
+.app_title{
+  text-shadow: 0 3px 10px var(--clr-accent);
+}
+
+.section-title{
+  text-shadow: 0 3px 10px var(--clr-accent);
+}
+
 .app-wrapper {
   display: flex;
   flex-direction: column;
@@ -42,9 +51,11 @@ code {
 
 .currency-converter {
   background-color: var(--clr-med);
+  /* background: radial-gradient(#303030,#D1D1D1); */
   padding: 10px;
   margin: 5px;
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
+  box-shadow: 0 3px 10px var(--clr-accent);
   text-align: center;
   border-radius: 10px;
 }
@@ -66,7 +77,8 @@ code {
   background-color: var(--clr-light);
   padding: 20px;
   margin: 10px;
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
+  box-shadow: 0 3px 10px var(--clr-accent);
   border-radius: 10px;
 }
 
@@ -75,7 +87,8 @@ code {
   margin: 10px;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
+  box-shadow: 0 3px 10px var(--clr-accent);
 }
 
 button {
@@ -98,9 +111,11 @@ input, select {
 
 .news-feed {
   background-color: var(--clr-med);
+  /* background: radial-gradient(#303030,#D1D1D1); */
   padding: 1em 3em;
   margin: 5px;
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
+  box-shadow: 0 3px 10px var(--clr-accent);
   border-radius: 10px;
 }
 
@@ -108,10 +123,16 @@ input, select {
   background-color: var(--clr-light);
   padding: .1em;
   margin: 1em 0;
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
+  box-shadow: 0 3px 10px var(--clr-accent);
   border-radius: 10px;
 }
 
-.news-feed_text{
+.news-feed_link{
   color: var(--clr-dark);
+  text-decoration: none;
+}
+
+.news-feed_link:hover{
+  color: var(--clr-accent);
 }
