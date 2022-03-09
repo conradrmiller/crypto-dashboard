@@ -1,3 +1,12 @@
+/* Custom Properties, update to change design */
+
+:root{
+  --clr-light: #fff;
+  --clr-med: #D1D1D1;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,43 +21,58 @@ code {
     monospace;
 }
 
+/* App level */
+
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  
 }
 
 .app-wrapper {
   display: flex;
+  flex-direction: column;
+  color: var(--clr-dark);
 }
 
-.news-feed {
-  background-color: rgb(204,204,231);
-  padding: 10px;
-  margin: 5px;
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
-  max-width: 300px;
-}
+/* Currency conversion */
 
 .currency-converter {
-  background-color: rgb(230, 223, 211);
+  background-color: var(--clr-med);
   padding: 10px;
   margin: 5px;
   box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
   text-align: center;
+  border-radius: 10px;
+}
+
+.currency-converter_wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .currency-converter_wrapper{
+
+    flex-direction: column;
+  }
+  
 }
 
 .exchange-rate {
-  background-color: rgb(221, 230, 221);
+  background-color: var(--clr-light);
   padding: 20px;
-  margin-top: 10px;
+  margin: 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
   border-radius: 10px;
-
 }
 
 .input-box {
-  background-color: rgb(218,227, 238);
+  background-color: var(--clr-light);
+  margin: 10px;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
@@ -62,9 +86,32 @@ button {
 }
 
 button:hover {
-  background-color: coral;
+  background-color: var(--clr-accent);
 }
 
 input, select {
   border: none;
+  background-color: var(--clr-med);
+}
+
+/* News Feed */
+
+.news-feed {
+  background-color: var(--clr-med);
+  padding: 1em 3em;
+  margin: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  border-radius: 10px;
+}
+
+.news-feed_item{
+  background-color: var(--clr-light);
+  padding: .1em;
+  margin: 1em 0;
+  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  border-radius: 10px;
+}
+
+.news-feed_text{
+  color: var(--clr-dark);
 }

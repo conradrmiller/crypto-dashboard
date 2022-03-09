@@ -23,14 +23,14 @@ const NewsFeed = () => {
 
     // console.log('articles:', articles);
 
-    const first7Articles = articles?.slice(0,7);
+
 
     return (
         <div className="news-feed">
             <h2>News Feed</h2>
-            {first7Articles?.map((article, _index) => (
-                <div key={_index}>
-                    <a href={article.data.url}><p>{article.data.title}</p></a>
+            {articles?.map((article, _index) => (
+                <div key={_index} className="news-feed_item">
+                    <a href={article.data.url}><p className="news-feed_text">{article.data.title}</p></a>
                 </div>
             ))}
         </div>
