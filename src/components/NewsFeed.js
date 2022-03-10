@@ -28,7 +28,7 @@ const NewsFeed = () => {
             <h2 className="section-title">News Feed</h2>
             {articles?.map((article, _index) => (
                 <div key={_index} className="news-feed_item">
-                    <a href={article.data.url} class="news-feed_link">
+                    <a href={article.data.url} className="news-feed_link">
                         <p className="news-feed_text">{article.data.title}</p>
                     </a>
                 </div>
