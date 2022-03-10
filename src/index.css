@@ -56,7 +56,7 @@ code {
 
 .currency-converter {
   background-color: var(--clr-dark);
-  outline: solid var(--clr-accent);
+  border: .1em solid var(--clr-accent);
   padding: 10px;
   margin: 1em;
   /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
@@ -121,7 +121,7 @@ input, select {
 
 .news-feed {
   background-color: var(--clr-dark);
-  outline: solid var(--clr-accent);
+  border: .1em solid var(--clr-accent);
   color: var(--clr-light);
   /* background: radial-gradient(#303030,#D1D1D1); */
   padding: 1em 3em;
