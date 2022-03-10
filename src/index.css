@@ -38,7 +38,7 @@ code {
 }
 
 .section-title{
-  text-shadow: 0 3px 10px var(--clr-accent);
+  /* text-shadow: 0 3px 10px var(--clr-accent); */
 }
 
 .app-wrapper {
@@ -51,7 +51,6 @@ code {
 
 .currency-converter {
   background-color: var(--clr-med);
-  /* background: radial-gradient(#303030,#D1D1D1); */
   padding: 10px;
   margin: 5px;
   /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
@@ -77,8 +76,8 @@ code {
   background-color: var(--clr-light);
   padding: 20px;
   margin: 10px;
-  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
-  box-shadow: 0 3px 10px var(--clr-accent);
+  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px var(--clr-accent); */
   border-radius: 10px;
 }
 
@@ -87,8 +86,8 @@ code {
   margin: 10px;
   padding: 30px;
   border-radius: 10px;
-  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
-  box-shadow: 0 3px 10px var(--clr-accent);
+  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px var(--clr-accent); */
 }
 
 button {
@@ -123,8 +122,8 @@ input, select {
   background-color: var(--clr-light);
   padding: .1em;
   margin: 1em 0;
-  /* box-shadow: 0 3px 10px rgb(0 0 0 /0.2); */
-  box-shadow: 0 3px 10px var(--clr-accent);
+  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+  /* box-shadow: 0 3px 10px var(--clr-accent); */
   border-radius: 10px;
 }
 
